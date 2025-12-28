@@ -12,7 +12,10 @@ generation recipe (localhost development).
 ```bash
 $ openssl genrsa -des3 -out rootCA.key 4096
 ```
-
+## root key (without passphrase)
+```bash
+$ openssl genrsa -out rootCA.key 4096
+```
 ## root Certificate Authority (to be imported to the browser)
 ```bash
 $ openssl req -x509 -new -nodes -key rootCA.key -sha256 -days 3650 -out rootCA.crt
